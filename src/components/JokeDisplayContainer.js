@@ -9,13 +9,14 @@ export class JokeDisplayContainer extends Component {
   }
 
   render() {
-    return <JokeDisplay />;
+    return <JokeDisplay joke={this.props} />
   }
 }
 
 const mapStateToProps = state => {
   return {
-    // joke: state.joke
+    setup: state && state[0].setup,
+    punchline: state && state[0].punchline
   }
 };
 
